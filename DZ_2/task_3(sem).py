@@ -18,6 +18,10 @@ CASH: int = 0
 LUXURY = 5000000
 LUXURY_TAX = 0.9
 
+COMMISSION = 0.015
+COMMISSION_MAX = 600
+COMMISSION_MIN = 30
+
 operation_tax = 50
 operation_count = 3
 bonus_operation = 1.03
@@ -47,15 +51,15 @@ while start_flag:
                 print("Бонус за 3 операции")
 
             money = int(input("Введите сумму снятия: "))
-            if money * 0.015 < CASH or money + 30 < CASH:
+            if money * COMMISSION < CASH or money + COMMISSION_MIN < CASH:
 
-                commission = money * 0.015
-                if commission < 30:
-                    commission = 30
+                COMMISSION = money * COMMISSION
+                if COMMISSION < COMMISSION_MIN:
+                    COMMISSION = COMMISSION_MIN
 
-                elif commission > 600:
-                    commission = 600
-                CASH = CASH - commission - money
+                elif COMMISSION > COMMISSION_MAX:
+                    COMMISSION = COMMISSION_MAX
+                CASH = CASH - COMMISSION - money
 
                 print("Остаток на счете: ", CASH)
             else:
