@@ -8,10 +8,11 @@
 
 # Словарь с именами друзей и кортежами вещей
 friends_dict = {
-    "John": ("tent", "flashlight", "food", "water", "clothes"),
+    "John": ("tent", "flashlight", "food", "water", "clothes",  "compass"),
     "Mary": ("tent", "food", "water", "map", "compass"),
-    "Steve": ("matches", "flashlight", "water", "clothes", "sunscreen"),
-    "Lenny": ("Umbrella", "flashlight", "food", "water", "clothes"),
+    "Steve": ("matches", "flashlight", "water", "clothes", "sunscreen",  "compass"),
+
+    "Lenny": ("Umbrella", "flashlight", "food", "water", "clothes",  "compass"),
 }
 
 # Преобразуем кортежи вещей в множества для удобства работы
@@ -28,4 +29,4 @@ unique_items = {name: items - set.union(*(s for n, s in friends_sets.items() if 
 one_missing_items = {name: (set.union(*(s for n, s in friends_sets.items() if n != name)) - items) 
                      for name, items in friends_sets.items()}
 
-print(f'Все други: {all_items},\n Уникальные вещи: {unique_items}, \n Взял один: {one_missing_items}')
+print(f'Все друзья: {all_items},\n Уникальные вещи: {unique_items}, \n Взял один: {one_missing_items}')
