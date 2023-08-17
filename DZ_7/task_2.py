@@ -1,5 +1,6 @@
 from random import randint
 
+__all__ = ['give_name']
 
 def give_name() -> str:
     name: str = ''

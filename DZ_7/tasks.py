@@ -1,5 +1,8 @@
 from os import listdir, rename, path
 
+__all__ = ['rename_files']
+
+
 def rename_files(wanted_name, count_nums, extension_old, extension_new, diapazon):
     directory = "."  # Укажите путь к каталогу, в котором нужно переименовать файлы
     

@@ -7,6 +7,7 @@ from pathlib import Path
 # В исходной папке должны остаться только те файлы,
 # которые не подошли для сортировки.
 
+__all__ = ['sort_files']
 
 def sort_files(directory: str | Path = 'test_dir'):
     chdir(directory)

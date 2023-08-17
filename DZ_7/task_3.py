@@ -12,7 +12,7 @@
 ✔ При достижении конца более короткого файла,
 возвращайтесь в его начало.
 '''
-
+__all__ = ['read_and_write_files']
 
 def read_and_write_files(name_file_names: str,
     name_file_numbers: str,

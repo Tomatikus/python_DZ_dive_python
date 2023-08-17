@@ -1,6 +1,8 @@
 
 from random import choice, randint
 
+__all__ = ['create_files']
+
 
 EXTEN = ('.txt', '.doc', '.pdf', '.csv')
 

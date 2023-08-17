@@ -1,5 +1,7 @@
 from random import randint, uniform
 
+__all__ = ['fill_in_file']
+
 def fill_in_file(name_file: str, count_line: int) -> None:
     name_file += '.txt'
 
