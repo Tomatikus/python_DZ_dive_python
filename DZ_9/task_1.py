@@ -25,7 +25,7 @@ def solve_quadratic(a, b, c):
 
 
 def generate_csv(filename, num_rows):
-    with open(filename, 'w', newline='') as file:
+    with open(f'{filename}.csv', 'w', newline='') as file:
         writer = csv.writer(file)
         for _ in range(num_rows):
             row = [random.random() for _ in range(3)]
@@ -34,7 +34,7 @@ def generate_csv(filename, num_rows):
 
 def quadratic_solver_decorator(func):
     def wrapper(filename):
-        with open(filename, 'r') as file:
+        with open(f'{filename}.csv', 'r') as file:
             reader = csv.reader(file)
             for row in reader:
                 a, b, c = map(float, row)
