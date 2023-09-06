@@ -60,8 +60,8 @@ def save_to_json(filename):
 
 
 
-@save_to_json("results.json")
 @quadratic_solver_decorator
+@save_to_json("results.json")
 def solve_quadratic(a, b, c):
     discriminant = b**2 - 4*a*c
     if discriminant < 0:
