@@ -21,7 +21,7 @@ class Student:
         self.middel_name = middel_name
         self.last_name = last_name
         
-        with open(csv_path, 'r') as l_lesson:
+        with open(csv_path, 'r', encoding='utf-8') as l_lesson:
             reader = csv.reader(l_lesson)
             self.subjects = {row[0]:{"grades":[], "test_scores": []} for row in reader}
             

@@ -1,9 +1,9 @@
 import csv
 
-subjects = ["Informatics","Mathematics", "Physics", "Chemistry", "History"]
+subjects = ["Информатика","Математика", "Физика", "Химия", "История"]
 
 csv_file_path = "subjects.csv"
-with open(csv_file_path, 'w', newline='') as file:
+with open(csv_file_path, 'w', encoding='utf-8', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(["Subjects"])
     for subject in subjects:
