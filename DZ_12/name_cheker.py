@@ -3,7 +3,7 @@
 
 class NameCheker:
     def __set_name__(self, owner, name):
-        self._name = "_" + name
+        self._name = "_" + name # так тоже можно записать: "self._name = f"_{name}""
 
     def __get__(self, instance, owner):
         return getattr(instance, self._name, None)
