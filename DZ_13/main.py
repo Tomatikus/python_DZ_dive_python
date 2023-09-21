@@ -41,6 +41,8 @@ class Student:
         return sum(self.test_results[subject]) / len(self.test_results[subject]) if self.test_results[subject] else 0
 
     def average_score(self):
-        total_scores = sum([sum(scores) for scores in self.scores.values()])
-        total_count = sum([len(scores) for scores in self.scores.values()])
+        total_scores = sum(sum(scores) for scores in self.scores.values())
+        total_count = sum(len(scores) for scores in self.scores.values())
         return total_scores / total_count if total_count else 0
+
+
